@@ -8,7 +8,5 @@ setup(
     author='Eu4ng',
     author_email='eu4ng97@gmail.com',
     packages=['e4_utilities'],
-    install_requires=[
-        'numpy>=2.2.6'
-    ]
+    install_requires=[]
 )
