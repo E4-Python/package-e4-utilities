@@ -41,3 +41,10 @@ def replace_filename(file_path: str, old_name: str, new_name: str):
 def replace_filenames(file_paths: list[str], old_name: str, new_name: str):
     for file_path in file_paths:
         replace_filename(file_path, old_name, new_name)
+
+def replace_directory(directory: str, old_name: str, new_name: str):
+    if not os.path.isdir(directory) or not os.path.exists(directory) or not old_name:
+        return
+
+    if old_name in directory:
+        os.rename(directory, directory.replace(old_name, new_name))
