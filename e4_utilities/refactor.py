@@ -1,6 +1,17 @@
 import os
 import glob
 
+def get_file_paths(directory: str, extensions: list[str] = None, recursive: bool = False) -> list[str]:
+    file_paths = []
+    all_file_paths = glob.glob(os.path.join(directory, '*.*')) if recursive is False else glob.glob(os.path.join(directory, '**', '*.*'), recursive=True)
+    for file_path in all_file_paths:
+        for extension in extensions:
+            if file_path.endswith(extension):
+                file_paths.append(file_path)
+                break
+
+    return file_paths
+
 def replace_text(file_path: str, old_text: str, new_text: str):
     if not os.path.exists(file_path) or not old_text:
         return
