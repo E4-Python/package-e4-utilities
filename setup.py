@@ -1,14 +1,15 @@
 from setuptools import setup
+import e4_utilities
+
+package_data = e4_utilities.load_json('package.json')
 
 setup(
-    name='e4_utilities',
-    version='0.1.0',
-    description='E4 Utilities',
-    url='https://github.com/E4-Python/package-e4-utilities',
-    author='Eu4ng',
-    author_email='eu4ng97@gmail.com',
-    packages=['e4_utilities'],
-    install_requires=[
-        'numpy>=2.2.6'
-    ]
+    name=package_data['name'],
+    version=package_data['version'],
+    description=package_data['description'],
+    url=package_data['url'],
+    author=package_data['author'],
+    author_email=package_data['author_email'],
+    packages=package_data['packages'],
+    install_requires=package_data['install_requires']
 )

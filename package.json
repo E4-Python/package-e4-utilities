@@ -1,0 +1,12 @@
+{
+    "name": "e4_utilities",
+    "version": "0.1.0",
+    "description": "E4 Utilities",
+    "url": "https://github.com/E4-Python/package-e4-utilities",
+    "author": "Eu4ng",
+    "author_email": "eu4ng97@gmail.com",
+    "packages": [
+        "e4_utilities"
+    ],
+    "install_requires": []
+}
