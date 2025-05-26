@@ -1,15 +1,15 @@
 from setuptools import setup
-import json
+import e4_utilities
 
-data = json.load(open('package.json', 'r', encoding='utf-8'))
+package_data = e4_utilities.load_json('package.json')
 
 setup(
-    name=data['name'],
-    version=data['version'],
-    description=data['description'],
-    url=data['url'],
-    author=data['author'],
-    author_email=data['author_email'],
-    packages=data['packages'],
-    install_requires=data['install_requires']
+    name=package_data['name'],
+    version=package_data['version'],
+    description=package_data['description'],
+    url=package_data['url'],
+    author=package_data['author'],
+    author_email=package_data['author_email'],
+    packages=package_data['packages'],
+    install_requires=package_data['install_requires']
 )
