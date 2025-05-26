@@ -1,3 +1,3 @@
-# Template Common
+# E4 Utilities
 
-저장소 공통 템플릿
+유틸리티 전용 파이썬 패키지

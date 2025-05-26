@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-    name='PACKAGE',
+    name='e4_utilities',
     version='0.1.0',
-    description='DESCRIPTION',
-    url='https://github.com/E4-Python/template-python-package',
+    description='E4 Utilities',
+    url='https://github.com/E4-Python/package-e4-utilities',
     author='Eu4ng',
     author_email='eu4ng97@gmail.com',
-    packages=['PACKAGE'],
+    packages=['e4_utilities'],
     install_requires=[
         'numpy>=2.2.6'
     ]
